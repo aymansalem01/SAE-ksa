@@ -45,9 +45,9 @@
             <div class="card mt-5" style="width: 24rem;background-color: #111827; border-radius: 10px; " >
                 <img src="{{asset('storage/'.$course->image) }}" class="card-img-top" alt="..." style="border-radius:10px ">
                 <div class="card-body p-4 text-white" >
-                    <h5 class="card-title text-white">{{$course->name}}</h5>
+                    <h5 class="card-title text-white mb-3 ">{{$course->name}}</h5>
                     <p class="card-text " style="color: #d1d5db">{{$course->description}}</p>
-                    <a href="{{ route('form', $course->id) }}" class="btn btn-primary">Go somewhere</a>
+                    <a href="{{ route('form', $course->id) }}" class="btn btn-primary mt-2">Register Now</a>
                 </div>
             </div>
             @endforeach

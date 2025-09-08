@@ -53,7 +53,7 @@
                 <div class="card-body p-4 text-white" >
                     <h2 class="card-title text-white">{{$category->name}}</h2>
                     <h5 class="card-text " style="color: #d1d5db" >{{$category->description}}</h5>
-                    <a href="{{route('course',$category->id)}}" class="btn btn-primary">Go somewhere</a>
+                    <a href="{{route('course',$category->id)}}" class="btn btn-primary mt-3">Show Courses </a>
                 </div>
             </div>
         @endforeach
