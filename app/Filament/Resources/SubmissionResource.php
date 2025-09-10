@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use Filament\Forms;
 use Filament\Tables;
 use App\Models\Course;
+use App\Models\Category;
 use Filament\Forms\Form;
 use App\Models\Submission;
 use Filament\Tables\Table;
@@ -39,9 +40,15 @@ class SubmissionResource extends Resource
                     ->required()
                     ->maxLength(255)
                     ->columnSpan(1),
+                Select::make('category')
+                    ->options(Category::all()->pluck('name', 'name'))
+                    ->required()
+                    ->columnSpan(1),
                 Select::make('course')
                     ->options(Course::all()->pluck('name', 'name'))
                     ->required()
+                    ->preload()
+                    ->multiple()
                     ->columnSpan(1),
                 Select::make('city')
                     ->required()
@@ -69,9 +76,15 @@ class SubmissionResource extends Resource
                     ->label('Phone Number')
                     ->sortable()
                     ->searchable(),
+                TextColumn::make('category')
+                    ->label('Category')
+                    ->sortable()
+                    ->searchable(),
                 TextColumn::make('course')
                     ->label('Course Name')
+
                     ->sortable()
+
                     ->searchable(),
                 TextColumn::make('city')
                     ->label('City')

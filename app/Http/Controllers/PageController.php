@@ -12,24 +12,24 @@ class PageController extends Controller
 
     public function index()
     {
-        $categories = Category::all();
-        return view('welcome', ['categories' => $categories]);
+
+        return view('welcome');
     }
 
-    public function course(string $id)
-    {
-        $category = Category::find($id);
-        $courses = Course::where('category_id', $id)->get();
-        return view('course', ['category' => $category, 'courses' => $courses]);
-    }
+    // public function course(string $id)
+    // {
+    //     $category = Category::find($id);
+    //     $courses = Course::where('category_id', $id)->get();
+    //     return view('course', ['category' => $category, 'courses' => $courses]);
+    // }
 
-    public function form(string $id)
-    {
-        $selected = Course::find($id);
-        $courses = Course::where('category_id', $selected->category_id)->get();
+    // public function form(string $id)
+    // {
+    //     $selected = Course::find($id);
+    //     $courses = Course::where('category_id', $selected->category_id)->get();
 
-        return view('form', ['selected' => $selected, 'courses' => $courses]);
-    }
+    //     return view('form', ['selected' => $selected, 'courses' => $courses]);
+    // }
 
     public function submission(Request $request)
     {
@@ -38,17 +38,20 @@ class PageController extends Controller
             'email' => 'required|email',
             'phone_number' => 'required',
             'city' => 'required',
+            'category' => 'required',
             'course' => 'required',
         ]);
-
+        $category = Category::find($request->category);
+        
         Submission::create([
             'name' => $request->name,
             'email' => $request->email,
             'phone_number' => $request->phone_number,
             'city' => $request->city,
-            'course' => $request->course
+            'category' => $category->name,
+            'course' => json_encode($request->course)
         ]);
 
-        return redirect()->route('form', ['success' => 'Thank you for your submission!']);
+        return redirect()->route('index', ['success' => 'Thank you for your submission!']);
     }
 }

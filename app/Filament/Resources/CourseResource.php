@@ -39,11 +39,11 @@ class CourseResource extends Resource
                     ->columnSpan(2),
                 TextInput::make('description')
                     ->label('Description')
-                    ->required()
+                    ->nullable()
                     ->columnSpan(2),
                 FileUpload::make('image')
                     ->label('Image')
-                    ->required()
+                    ->nullable()
                     ->image()
                     ->columnSpan(2),
                 Select::make('category_id')

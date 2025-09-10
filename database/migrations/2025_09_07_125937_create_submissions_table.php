@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->nullable();
             $table->string('phone_number');
-            $table->string('course');
+            $table->string('category');
+            $table->json('course');
             $table->string('city');
             $table->timestamps();
         });

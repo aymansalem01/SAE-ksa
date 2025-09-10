@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>SAE KSA</title>
     <style>
@@ -14,53 +14,128 @@
             margin: 0;
             padding: 0;
         }
+
         .animation:hover {
-        transform: scale(1.05); /* Zooms in slightly on hover */
-        transition: transform 0.3s ease-in-out; /* Smooth transition */
-    }
+            transform: scale(1.05);
+            /* Zooms in slightly on hover */
+            transition: transform 0.3s ease-in-out;
+            /* Smooth transition */
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 60px auto;
+            background: transparent;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .form-control,
+        .form-select {
+            background-color: #111;
+            color: #fff;
+            border: 1px solid #333;
+        }
+
+        .form-control::placeholder {
+            color: #aaa;
+        }
+
+        .form-control:focus {
+            background-color: #111;
+            color: #fff;
+        }
+
+        .form-select option {
+            background-color: #111;
+            color: #fff;
+        }
+
+        .btn-custom {
+            background-color: #222;
+            color: #fff;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100%;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #444;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-header h2 {
+            font-weight: bold;
+        }
+
+        .form-label {
+            color: #fff;
+        }
     </style>
 </head>
 
-<body>
-    {{--------------------------- nav bar -------------------}}
+<body dir="rtl">
     <div class="mt-4 ">
-        <ul class="nav nav-tabs ">
-            <li class="nav-item m-4  " style="width: 207px">
-                <a class="nav-link" href="#"><img src="{{ asset('assets/images/sae-logo.webp') }}" alt="" width="100%"></a>
+        <ul class="nav nav-tabs d-flex justify-content-end ">
+            <li class="nav-item m-4 text" style="width: 207px">
+                <a class="nav-link" href="#"><img src="{{asset('assets/images/sae-logo.webp')}}" alt="" width="100%" /></a>
             </li>
         </ul>
     </div>
 
-    <section >
-        <div class="container mt-5">
-            <h1 class="text-center text-white mt-3"><span style="color:#f15d24 ">47</span> composes In <span style="color: #f15d24">23</span> Countries </h1>
-            <h2 class="text-center text-white mt-3"><span style="color: #f15d24">SOON</span> in KSA</h2>
-        </div>
-    </section>
-
-    <section>
-        <div class="text-center mt-4" >
-            <img src="{{ asset('assets/images/SAE MAP-01.png') }}" alt="">
-        </div>
-    </section>
-    <section class="d-flex gap-5 justify-content-around container mt-5 flex-wrap" >
-        @if ($categories->isEmpty())
-            <h1 class="text-center text-white mt-3">No Courses Found</h1>
-        @endif
-        @foreach ($categories as $category)
-        <div class="card mt-5 animation" style="width: 40%;background-color: #111827; border-radius: 10px; " >
-                <img src="{{asset('storage/'.$category->image) }}" height="300px" class="card-img-top" alt="..." style="border-radius:10px ">
-                <div class="card-body p-4 text-white" >
-                    <h2 class="card-title text-white">{{$category->name}}</h2>
-                    <h5 class="card-text " style="color: #d1d5db" >{{$category->description}}</h5>
-                    <a href="{{route('course',$category->id)}}" class="btn btn-primary mt-3">Show Courses </a>
-                </div>
+    <section class="container">
+        <div class=" mt-5 d-flex justify-content-center flex-column ">
+            <h2 class="text-center text-white mt-3 ">
+                هل تمتلك الشغف لتطوير الألعاب،صناعة الأفلام، أو خوض مجالات الإبداع الأخرى؟
+            </h2>
+            <div class="text-center">
+                <h4 class="text-center text-white mt-3  w-75 mx-auto">
+                    سجل اهتمامك في برامج الدبلوم أو الدورات القصيرة المتخصصة في أكبر كلية الإعلام الإبداعي في العالم،
+                    التي تمتد بخبرتها عبر 43 فرعًا في 27 دولة و قريباً في المملكة العربية السعودية ،
+                    سجّل اهتمامك الآن، وابدأ رحلتك نحو مستقبل مهني مليء بالابتكار والفرص.
+                </h4>
             </div>
-        @endforeach
+
+        </div>
+    </section>
+    <section>
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide container mt-5" data-bs-ride="carousel" style="height: 600px">
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{asset('assets/images/image.JPG')}}" alt="" class="d-block" style="width: 100%" height="600px" />
+                </div>
+                <div class="carousel-item">
+                    <img src="{{asset('assets/images/image2.JPG')}}" alt="" class="d-block" style="width: 100%" height="600px" />
+                </div>
+                <div class="carousel-item">
+                    <img src="{{asset('assets/images/image3.JPG')}}" alt="" class="d-block" style="width: 100%" height="600px" />
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5 form-container">
+        @livewire('submission-form')
     </section>
 
-
-
+    <footer class="my-5 pt-5" style="border-top: solid #ffffff 0.1px ;">
+        <p class="text-center text-white">
+            جميع الحقوق محفوظة © 2025
+        </p>
+    </footer>
 </body>
 
 </html>

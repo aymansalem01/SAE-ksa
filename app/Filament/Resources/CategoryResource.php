@@ -33,10 +33,13 @@ class CategoryResource extends Resource
                     ->maxLength(255)
                     ->columnSpan(1),
                 TextInput::make('header')
+                    ->nullable()
                     ->columnSpan(1),
                 TextInput::make('description')
+                    ->nullable()
                     ->columnSpan(2),
                 FileUpload::make('image')
+                    ->nullable()
                     ->columnSpan(2),
             ]);
     }
