@@ -110,13 +110,13 @@
             <!-- The slideshow/carousel -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{asset('assets/images/image.JPG')}}" alt="" class="d-block" style="width: 100%" height="600px" />
+                    <img src="{{asset('assets/images/image4.png')}}" alt="" class="d-block" style="width: 100%" height="600px" />
                 </div>
                 <div class="carousel-item">
                     <img src="{{asset('assets/images/image2.JPG')}}" alt="" class="d-block" style="width: 100%" height="600px" />
                 </div>
                 <div class="carousel-item">
-                    <img src="{{asset('assets/images/image3.JPG')}}" alt="" class="d-block" style="width: 100%" height="600px" />
+                    <img src="{{asset('assets/images/image.JPG')}}" alt="" class="d-block" style="width: 100%" height="600px" />
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
