@@ -16,9 +16,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->nullable();
             $table->string('phone_number');
-            $table->string('category');
-            $table->json('course');
-            $table->string('city');
+            $table->string('category')->nullable();
+            $table->json('course')->nullable();
+            $table->string('city')->nullable();
+            $table->string('about_sae')->nullable();
             $table->timestamps();
         });
     }

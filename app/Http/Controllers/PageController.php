@@ -16,42 +16,41 @@ class PageController extends Controller
         return view('welcome');
     }
 
-    // public function course(string $id)
-    // {
-    //     $category = Category::find($id);
-    //     $courses = Course::where('category_id', $id)->get();
-    //     return view('course', ['category' => $category, 'courses' => $courses]);
-    // }
+    public function english()
+    {
+        return  view('english');
+    }
 
-    // public function form(string $id)
-    // {
-    //     $selected = Course::find($id);
-    //     $courses = Course::where('category_id', $selected->category_id)->get();
-
-    //     return view('form', ['selected' => $selected, 'courses' => $courses]);
-    // }
 
     public function submission(Request $request)
     {
+        dd($request->all());
         $request->validate([
             'name' => 'required',
-            'email' => 'required|email',
-            'phone_number' => 'required',
-            'city' => 'required',
-            'category' => 'required',
-            'course' => 'required',
+            'email' => 'nullable|email',
+            'phone_number' => [
+                'required',
+                'regex:/^966\d{9}$/'
+            ],
         ]);
-        $category = Category::find($request->category);
-        
+        if ($request->category != null) {
+
+            $category = Category::find($request->category);
+        } else {
+            $category = null;
+        }
+
         Submission::create([
             'name' => $request->name,
             'email' => $request->email,
             'phone_number' => $request->phone_number,
-            'city' => $request->city,
+            'city' => $request->city == 'other' ? $request->other_city : $request->city,
             'category' => $category->name,
-            'course' => json_encode($request->course)
+            'course' => json_encode($request->course),
+            'about_sae' => $request->hear
+
         ]);
 
-        return redirect()->route('index', ['success' => 'Thank you for your submission!']);
+        return redirect()->route('index')->with('success', 'thanks for your submission');
     }
 }

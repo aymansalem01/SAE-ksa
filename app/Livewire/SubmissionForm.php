@@ -13,7 +13,7 @@ class SubmissionForm extends Component
 {
     public $categories , $courses   = [];
 
-    public $name , $email , $phone_number , $city , $category;
+    public $name , $email , $phone_number , $city , $category , $hear;
 
     public $course = [];
 
@@ -30,6 +30,11 @@ class SubmissionForm extends Component
 
     public function updatedCategory()
     {
-        $this->courses = Course::where('category_id', $this->category)->get();
+        if ($this->category == 'all_of_them') {
+            $this->courses = Course::get();
+        }
+        else {
+            $this->courses = Course::where('category_id', $this->category)->get();
+        }
     }
 }
