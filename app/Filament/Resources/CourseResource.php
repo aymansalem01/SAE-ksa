@@ -37,6 +37,11 @@ class CourseResource extends Resource
                     ->required()
                     ->maxLength(255)
                     ->columnSpan(2),
+                TextInput::make('name_en')
+                    ->label('Course Name (English)')
+                    ->required()
+                    ->maxLength(255)
+                    ->columnSpan(2),
                 TextInput::make('description')
                     ->label('Description')
                     ->nullable()

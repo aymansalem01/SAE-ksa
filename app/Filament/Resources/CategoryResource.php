@@ -32,6 +32,10 @@ class CategoryResource extends Resource
                     ->required()
                     ->maxLength(255)
                     ->columnSpan(1),
+                TextInput::make('name_en')
+                    ->required()
+                    ->maxLength(255)
+                    ->columnSpan(1),
                 TextInput::make('header')
                     ->nullable()
                     ->columnSpan(1),
