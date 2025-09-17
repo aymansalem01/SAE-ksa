@@ -10,4 +10,3 @@ Route::get('/',[PageController::class,'index'])->name('index');
 Route::post('submission',[PageController::class,'submission'])->name('submission');
 Route::get('english', [PageController::class, 'english'])->name('english');
 
-Route::view('test','english');
