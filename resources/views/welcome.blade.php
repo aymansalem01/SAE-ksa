@@ -52,18 +52,15 @@
         }
 
         .btn-custom {
-            background-color: #222;
+            background-color: #ff6900;
             color: #fff;
             border-radius: 8px;
             padding: 10px;
-            width: 100%;
+            width: 50%;
             font-weight: bold;
             transition: all 0.3s ease;
         }
 
-        .btn-custom:hover {
-            background-color: #444;
-        }
 
         .form-header {
             text-align: center;
@@ -77,23 +74,27 @@
         .form-label {
             color: #fff;
         }
-
     </style>
 </head>
 
 <body dir="rtl">
-        <div style="background-color: white; z-index: auto;" class="d-flex justify-content-start" >
-            <button class="btn btn-primary me-5">
-                <a href="{{route('english')}}" style="text-decoration: none; color: white;">english</a>
-            </button>
+    <div style="background-color: white; z-index: auto;" class="d-flex justify-content-start">
+
     </div>
 
     <div class="mt-4 ">
-        <ul class="nav nav-tabs d-flex justify-content-end ">
+        <ul class="nav nav-tabs d-flex justify-content-between ">
+            <li class=" m-4 ">
+                <button class="btn  " style="background-color: #ff6900; padding: 16px 30px; border-radius:25px ;">
+                    <a href="{{ route('english') }}" style="text-decoration: none; color: white;">English</a>
+                </button>
+            </li>
             <li class="nav-item m-4 text" style="width: 207px">
-                <a class="p-3" ><img src="{{asset('assets/images/sae-logo.webp')}}" alt="" width="100%" /></a>
+                <a class="p-3"><img src="{{ asset('assets/images/sae-logo.webp') }}" alt=""
+                        width="100%" /></a>
             </li>
         </ul>
+
     </div>
 
     <section class="container">
@@ -103,8 +104,8 @@
             </h2>
             <div class="text-center">
                 <h4 class="text-center text-white mt-3  w-75 mx-auto">
-                    سجل اهتمامك في برامج الدبلوم أو الدورات القصيرة المتخصصة في أكبر كلية الإعلام الإبداعي في العالم،
-                    التي تمتد بخبرتها عبر 43 فرعًا في 27 دولة و قريباً في المملكة العربية السعودية ،
+                    سجّل اهتمامك في برامج الدبلوم أو الدورات القصيرة المتخصصة في أكبر كلية الإعلام الإبداعي في العالم،
+                    التي تمتد بخبرتها عبر 43 فرعًا في 27 دولة<br> وقريباً في المملكة العربية السعودية ،
                     سجّل اهتمامك الآن، وابدأ رحلتك نحو مستقبل مهني مليء بالابتكار والفرص.
                 </h4>
             </div>
@@ -113,17 +114,20 @@
     </section>
     <section>
         <!-- Carousel -->
-        <div id="demo" class="carousel slide  mt-5" data-bs-ride="carousel" >
+        <div id="demo" class="carousel slide  mt-5" data-bs-ride="carousel">
             <!-- The slideshow/carousel -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{asset('assets/images/3.png')}}" alt="" class="d-block" style="width: 100%" height="" />
+                    <img src="{{ asset('assets/images/3.png') }}" alt="" class="d-block" style="width: 100%"
+                        height="" />
                 </div>
                 <div class="carousel-item">
-                    <img src="{{asset('assets/images/1.png')}}" alt="" class="d-block" style="width: 100%" height="" />
+                    <img src="{{ asset('assets/images/1.png') }}" alt="" class="d-block" style="width: 100%"
+                        height="" />
                 </div>
                 <div class="carousel-item">
-                    <img src="{{asset('assets/images/2.png')}}" alt="" class="d-block" style="width: 100%" height="" />
+                    <img src="{{ asset('assets/images/2.png') }}" alt="" class="d-block" style="width: 100%"
+                        height="" />
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>

@@ -52,18 +52,15 @@
         }
 
         .btn-custom {
-            background-color: #222;
+            background-color: #ff6900;
             color: #fff;
             border-radius: 8px;
             padding: 10px;
-            width: 100%;
+            width: 50%;
             font-weight: bold;
             transition: all 0.3s ease;
         }
 
-        .btn-custom:hover {
-            background-color: #444;
-        }
 
         .form-header {
             text-align: center;
@@ -81,16 +78,17 @@
 </head>
 
 <body dir="ltr">
-        <div style="background-color: white; z-index: auto;" class="d-flex justify-content-end" >
-            <button class="btn btn-primary me-5">
-                <a href="{{route('index')}}" style="text-decoration: none; color: white;">عربي</a>
-            </button>
-    </div>
+
     <div class="mt-4 ">
-        <ul class="nav nav-tabs d-flex justify-content-start ">
+        <ul class="nav nav-tabs d-flex justify-content-between ">
             <li class="nav-item m-4 text" style="width: 207px">
                 <a class="p-3" ><img src="{{ asset('assets/images/sae-logo.webp') }}" alt=""
                         width="100%" /></a>
+            </li>
+               <li class=" m-4 ">
+            <button class="btn me-5 " style="background-color: #ff6900; padding: 16px 30px; border-radius:25px ;">
+                <a href="{{route('index')}}" style="text-decoration: none; color: white;">عربي</a>
+            </button>
             </li>
         </ul>
     </div>
@@ -103,8 +101,8 @@
             <div class="text-center">
                 <h4 class="text-center text-white mt-3  w-75 mx-auto">
                     Register your interest in diploma programs or specialized short courses at the world's largest
-                    creative media college,
-                    with experience spanning 43 campuses in 27 countries — and soon in the Kingdom of Saudi Arabia.
+                    creative media college,<br>
+                    with experience spanning 43 campuses in 27 countries — and soon in the Kingdom of Saudi Arabia.<br>
                     Register your interest now and start your journey toward a career filled with innovation and
                     opportunities.
                 </h4>

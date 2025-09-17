@@ -35,7 +35,7 @@
         </div>
         <!-- City -->
         <div class="mb-4">
-            <label for="city" class="form-label">city:</label>
+            <label for="city" class="form-label">City:</label>
             <select id="city" name="city" class="form-select p-3" style="background-color: #111827"
                 wire:model.live="city">
                 <option selected disabled>Select your city</option>
@@ -109,15 +109,17 @@
                 wire:model.live="hear">
                 <option selected value=""> select</option>
                 <option value="yes">Yes </option>
-                <option value="no"> No, I am ث to know more </option>
+                <option value="no"> No, I am interested to know more </option>
             </select>
             @error('hear')
                 <span class="text-danger">{{ $message }}</span>
             @enderror
         </div>
         <!-- Submit -->
-        <button type="submit" class="btn btn-custom" style="background-color: #111827; border: solid #a0a0a0 0.1px">
-            Send
+        <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-custom" style="background-color: #ff6900; border: solid #a0a0a0 0.1px">
+            Submit
         </button>
+        </div>
     </form>
 </div>
