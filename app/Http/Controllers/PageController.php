@@ -24,7 +24,7 @@ class PageController extends Controller
 
     public function submission(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
         $request->validate([
             'name' => 'required',
             'email' => 'nullable|email',
@@ -48,7 +48,6 @@ class PageController extends Controller
             'category' => $category->name,
             'course' => json_encode($request->course),
             'about_sae' => $request->hear
-
         ]);
 
         return redirect()->route('index')->with('success', 'thanks for your submission');

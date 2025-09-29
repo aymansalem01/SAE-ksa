@@ -78,18 +78,14 @@
 </head>
 
 <body dir="rtl">
-    <div style="background-color: white; z-index: auto;" class="d-flex justify-content-start">
-
-    </div>
-
-    <div class="mt-4 ">
-        <ul class="nav nav-tabs d-flex justify-content-between ">
-            <li class=" m-4 ">
-                <button class="btn  " style="background-color: #ff6900; padding: 16px 30px; border-radius:25px ;">
+    <div >
+        <ul class="nav nav-tabs d-flex justify-content-between">
+            <li class="nav-item m-sm-1 m-lg-4 ">
+                <button class="btn px-lg-4 py-lg-3" style="background-color: #ff6900; border-radius:25px ;">
                     <a href="{{ route('english') }}" style="text-decoration: none; color: white;">English</a>
                 </button>
             </li>
-            <li class="nav-item m-4 text" style="width: 207px">
+            <li class="nav-item m-sm-1 text m-lg-4" style="width: 207px">
                 <a class="p-3"><img src="{{ asset('assets/images/sae-logo.webp') }}" alt=""
                         width="100%" /></a>
             </li>
