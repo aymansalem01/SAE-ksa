@@ -24,7 +24,7 @@ class PageController extends Controller
 
     public function submission(Request $request)
     {
-        // dd($request->all());
+         dd($request->all());
         $request->validate([
             'name' => 'required',
             'email' => 'nullable|email',
