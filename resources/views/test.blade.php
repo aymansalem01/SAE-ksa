@@ -83,17 +83,17 @@
                 <div class="collapse navbar-collapse justify-content-between">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a href="" class=" nav-link ">
+                            <a href="" class=" nav-link "  >
                                 Home
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class=" nav-link  ">
+                            <a href="#contactForm" class=" nav-link  ">
                                 Contact Form
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class=" nav-link  ">
+                            <a href="#about" class=" nav-link  ">
                                 About Us
                             </a>
                         </li>
@@ -101,7 +101,7 @@
                     <div class="others-option d-flex align-items-center">
                         <div class="option-item">
                             <div class="nav-btn">
-                                <a href="contact-us.html" class="default-btn">Contact Us</a>
+                                <a href="#contactForm" class="default-btn">Contact Us</a>
                             </div>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
                         <div class="accordion-body">
                             <div class="accordion" id="navbarAccordion8">
                                 <div class="accordion-item">
-                                    <a href="" class="accordion-link">
+                                    <a href="#about" class="accordion-link">
                                         About Us
                                     </a>
                                 </div>
@@ -138,7 +138,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <a class="accordion-link without-icon" href="contact-us.html">
+                    <a class="accordion-link without-icon" href="#contactForm">
                         Contact Us
                     </a>
                 </div>
@@ -166,7 +166,7 @@
                         YOUR CREATIVE CAREER BEGINS NOW
                     </p>
                     <div class="buttons-action" data-aos="fade-up" data-aos-delay="100">
-                        <a class="default-btn" href="">Contact Us</a>
+                        <a class="default-btn" href="#contactForm">Contact Us</a>
                     </div>
 
                     <div class="scroll-down" data-aos="fade-down" data-aos-delay="100">
@@ -179,125 +179,36 @@
     <!-- End Clgun Banner 2 Area -->
 
 
-           <!-- Start Faculty Area 2 -->
-        <div class="faculty-area-2 ptb-100">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4">
-                        <div class="heading" data-aos="fade-up" data-aos-delay="100" >
-                            <h2>47 Campuses Globally</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                        <div class="content">
-                            <p style="font-size:22px ">SAE Gives You World Access
-SAE has around 47 campuses in 23 countries. Our students and teachers are a unique, diverse, and creative community who come together for a collective purpose – outstanding education opportunities.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- End Faculty Area 2 -->
-    <!-- Start Contact  Area-->
-    <div class="contact-area ptb-100">
+    <!-- Start Faculty Area 2 -->
+    <div class="faculty-area-2 ptb-100">
         <div class="container">
-            <div class="d-flex justify-content-center">
-                <div class="contact-form col-8">
-                    <form id="contactForm" action="{{ route('submission') }}" method="POST">
-                        @csrf
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <label for="name">First Name</label>
-                                    <input type="text" name="first_name" class="form-control" id="name"
-                                        required data-error="Please enter your name" placeholder="First Name">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Last Name</label>
-                                    <input type="text" name="last_name" class="form-control" id="name2"
-                                        required data-error="Please enter your name" placeholder=" last name ">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Email</label>
-                                    <input type="email" name="email" class="form-control" id="email"
-                                        required data-error="Please enter your email"
-                                        placeholder="exampl@example.com">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Phone</label>
-                                    <input type="text" name="phone_number" class="form-control" id="phone_number"
-                                        required data-error="Please enter your phone number" placeholder="966xxxxxxx">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-
-
-                            <div class="form-group col-6 ">
-                                <label for="name">Study plan</label>
-                                <select class="form-select" aria-label="Default select example" name="category">
-                                    <option selected>Select study plan</option>
-                                    <option value="1">Diploma(1-2 years)</option>
-                                    <option value="2">short course </option>
-                                    <option value="3">all of them</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-6">
-                                <label for="course">Select Your Course</label>
-                                <select id="course" name="course[]" class="form-select" multiple>
-                                    <option value="1">Course 1</option>
-                                    <option value="2">Course 2</option>
-                                    <option value="3">Course 3</option>
-                                </select>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="name">Select Your City </label>
-                                    <select class="form-select" name="city" aria-label="Default select example">
-                                        <option selected>Select your city</option>
-                                        <option value="1">Jeddah</option>
-                                        <option value="2">Riyadh </option>
-                                        <option value="3">other</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <label for="name">Any comment</label>
-                                        <textarea name="message" id="message" class="form-control" cols="30" rows="6" required
-                                            data-error="Please enter your message" placeholder=""></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <button type="submit" class="default-btn">Submit Now</button>
-                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                    </form>
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="heading" data-aos="fade-up" data-aos-delay="100">
+                        <h2>47 Campuses Globally</h2>
+                    </div>
                 </div>
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="content">
+                        <p style="font-size:22px ">SAE Gives You World Access
+                            SAE has around 47 campuses in 23 countries. Our students and teachers are a unique, diverse,
+                            and creative community who come together for a collective purpose – outstanding education
+                            opportunities.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </div>
+    <!-- End Faculty Area 2 -->
+    <!-- Start Contact  Area-->
 
-    </div>
-    </div>
-    </div>
-    </div>
 
+
+
+    <section>
+    @livewire('english')
+    </section>
     <!-- End Contact Area-->
 
 
@@ -403,19 +314,7 @@ SAE has around 47 campuses in 23 countries. Our students and teachers are a uniq
     <script src="{{ asset('assets/js/magnific-popup.min.js') }}"></script>
     <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Select2 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#course').select2({
-                placeholder: "You can select more than one course",
-                allowClear: true,
-                width: '100%',
-            });
-        });
-    </script>
+
 </body>
 
 </html>

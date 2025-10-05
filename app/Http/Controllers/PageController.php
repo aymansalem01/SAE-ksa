@@ -41,13 +41,14 @@ class PageController extends Controller
         }
 
         Submission::create([
-            'name' => $request->name,
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
             'email' => $request->email,
             'phone_number' => $request->phone_number,
             'city' => $request->city == 'other' ? $request->other_city : $request->city,
             'category' => $category->name,
             'course' => json_encode($request->course),
-            'about_sae' => $request->hear
+            'about_sae' => $request->message
         ]);
 
         return redirect()->route('index')->with('success', 'thanks for your submission');

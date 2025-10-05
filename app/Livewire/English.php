@@ -11,7 +11,7 @@ class English extends Component
 
         public $categories , $courses   = [];
 
-    public $name , $email , $phone_number , $city , $category , $hear  ;
+    public $name , $email , $phone_number , $city , $category , $hear ,$otherCity  ;
 
     public $course = [];
 
