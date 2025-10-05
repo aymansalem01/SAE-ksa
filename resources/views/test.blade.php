@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- SweetAlert2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+
+
+
     <style>
         .select2-container .select2-selection--multiple {
             margin-bottom: 30px;
@@ -306,7 +311,18 @@
     <div class="go-top active">
         <i class="bx bx-up-arrow-alt"></i>
     </div>
-
+    @if(session('success'))
+<script>
+    Swal.fire({
+        icon: 'success',
+        title: 'Success!',
+        text: "{{ session('success') }}",
+        timer: 3000,
+        timerProgressBar: true,
+        showConfirmButton: false
+    });
+</script>
+@endif
     <!-- Links of JS files -->
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/aos.js') }}"></script>
@@ -314,6 +330,8 @@
     <script src="{{ asset('assets/js/magnific-popup.min.js') }}"></script>
     <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 
 </body>
 

@@ -24,9 +24,9 @@ class PageController extends Controller
 
     public function submission(Request $request)
     {
-         dd($request->all());
         $request->validate([
-            'name' => 'required',
+            'first_name' => 'required',
+            'last_name' => 'required',
             'email' => 'nullable|email',
             'phone_number' => [
                 'required',
@@ -34,23 +34,20 @@ class PageController extends Controller
             ],
         ]);
         if ($request->category != null) {
-
             $category = Category::find($request->category);
         } else {
             $category = null;
         }
-
         Submission::create([
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
             'phone_number' => $request->phone_number,
             'city' => $request->city == 'other' ? $request->other_city : $request->city,
-            'category' => $category->name,
+            'category' => $request->category == 'all_of_them' ? 'all of them' : $category->name,
             'course' => json_encode($request->course),
-            'about_sae' => $request->message
+            'message' => $request->message
         ]);
-
-        return redirect()->route('index')->with('success', 'thanks for your submission');
+        return redirect()->back()->with('success', 'thanks for your submission');
     }
 }
