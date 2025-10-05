@@ -28,10 +28,14 @@ class SubmissionResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')
+                TextInput::make('first_name')
                     ->required()
                     ->maxLength(255)
-                    ->columnSpan(2),
+                    ->columnSpan(1),
+                TextInput::make('last_name')
+                    ->required()
+                    ->maxLength(255)
+                    ->columnSpan(1),
                 TextInput::make('email')
                     ->email()
                     ->maxLength(255)
@@ -57,15 +61,19 @@ class SubmissionResource extends Resource
                         'Riyadh' => 'Riyadh',
                     ])
                     ->columnSpan(1),
-                ]);
+            ]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('name')
-                    ->label('Name')
+                TextColumn::make('first_name')
+                    ->label('First Name')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('last_name')
+                    ->label('Last Name')
                     ->sortable()
                     ->searchable(),
                 TextColumn::make('email')
@@ -82,12 +90,18 @@ class SubmissionResource extends Resource
                     ->searchable(),
                 TextColumn::make('course')
                     ->label('Course Name')
-
                     ->sortable()
-
-                    ->searchable(),
+                    ->searchable()
+                    ->formatStateUsing(function ($state) {
+                        $array = json_decode($state, true);
+                        return is_array($array) ? implode(', ', $array) : $state;
+                    }),
                 TextColumn::make('city')
                     ->label('City')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('message')
+                    ->label('Message')
                     ->sortable()
                     ->searchable(),
             ])
