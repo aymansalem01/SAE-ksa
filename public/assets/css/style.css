@@ -952,11 +952,11 @@ About Us Area 2 CSS
 
 .about-us-area-2 .content-items .content {
   max-width: 615px;
-  padding: 50px 50px;
+  padding: 20px 20px;
   background-color: var(--secounderyColor);
   position: absolute;
   content: '';
-  top: 10%;
+  top: 25%;
   right: 0%;
   border-radius: 5px;
 }
@@ -3522,7 +3522,7 @@ Faculty CSS
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: var(--blackColor);
+  background-color: var(--mainColor);
 }
 
 .faculty-area .content {
@@ -3547,11 +3547,11 @@ Faculty CSS
 .faculty-area-2 .heading h2{
   font-family: 'Lexend', sans-serif;
   font-size: 48px;
-  color: var(--whiteColor);
+  color: white;
 }
 
 .faculty-area-2 .content p{
-  color: var(--paragraphColorSecond);
+  color: white;
 }
 
 .faculty-area-3 .content {

@@ -159,13 +159,14 @@
         <div class="container">
             <div class="banner-content-2">
                 <div class="content">
-                    <span data-aos="fade-zoom-in" data-aos-delay="300">The Best University of The State</span>
-                    <h1 data-aos="fade-up" data-aos-delay="200">SAE Institue</h1>
+                    <span data-aos="fade-zoom-in" data-aos-delay="300">Leading Global Specialist in Creative Media
+                        Education</span>
+                    <h1 data-aos="fade-up" data-aos-delay="200" style="font-size: 100px">SAE Institue</h1>
                     <p data-aos="fade-up" data-aos-delay="300">
                         YOUR CREATIVE CAREER BEGINS NOW
                     </p>
                     <div class="buttons-action" data-aos="fade-up" data-aos-delay="100">
-                        <a class="default-btn" href="">Connect with Us</a>
+                        <a class="default-btn" href="">Contact Us</a>
                     </div>
 
                     <div class="scroll-down" data-aos="fade-down" data-aos-delay="100">
@@ -178,7 +179,26 @@
     <!-- End Clgun Banner 2 Area -->
 
 
+           <!-- Start Faculty Area 2 -->
+        <div class="faculty-area-2 ptb-100">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="heading" data-aos="fade-up" data-aos-delay="100" >
+                            <h2>47 Campuses Globally</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                        <div class="content">
+                            <p style="font-size:22px ">SAE Gives You World Access
+SAE has around 47 campuses in 23 countries. Our students and teachers are a unique, diverse, and creative community who come together for a collective purpose – outstanding education opportunities.</p>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+        <!-- End Faculty Area 2 -->
     <!-- Start Contact  Area-->
     <div class="contact-area ptb-100">
         <div class="container">
@@ -288,9 +308,14 @@
     <div id="about" class="about-us-area-2 ptb-100">
         <div class="container">
             <div class="section-title" data-aos="fade-up" data-aos-delay="100">
-                <h2>About Our University</h2>
-                <p>Only when different values, experiences and perspectives are met with free and open discourse can
-                    education be truly transformative..</p>
+                <h2>Why SAE</h2>
+                <p style="font-size: 16px;">
+                    SAE has been delivering outstanding industry-focused education since 1976. We have set the benchmark
+                    for Higher Education in Creative Media because we know these industries and how to train
+                    industry-ready graduates.
+                    We love what we do and are committed to the provision of education options that challenge, develop,
+                    and inspire.
+                <p>
             </div>
             <div class="about-content-courser owl-carousel owl-theme">
                 <div class="content-items" data-dot="<button>01</button>">
@@ -298,12 +323,13 @@
                         style="background-image: url('{{ asset('assets/images/game.png') }}');">
                     </div>
                     <div class="content" data-aos="fade-up" data-aos-delay="200">
-                        <span>Campus Information</span>
-                        <h2>Where Knowledge Meets Innovation</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm tem incid idunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim iam quis nostrud xerci tation ulla mco
-                            laboris nisi ut</p>
-                        <a class="default-btn" href="schedule-tour.html">Schedule A Tour</a>
+                        <h2>SAE EQUIPS YOU FOR SUCCESS</h2>
+                        <p>We are the world’s leading educator in creative industries because we work closely with our
+                            industry partners, we employ specialist teachers with real-world experience, and we deliver
+                            personalised education in world-class facilities.
+                            Our specialised courses in creative media are responsive to the dynamic and evolving nature
+                            of these industries. We keep our finger on the pulse and think outside the square to help
+                            you reach your potential and realise your dreams</p>
                     </div>
                 </div>
                 <div class="content-items" data-dot="<button>02</button>">
@@ -311,12 +337,10 @@
                         style="background-image: url('{{ asset('assets/images/audio.png') }}') ">
                     </div>
                     <div class="content" data-aos="fade-up" data-aos-delay="200">
-                        <span>Campus Information</span>
-                        <h2>Where Knowledge Meets Innovation</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm tem incid idunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim iam quis nostrud xerci tation ulla mco
-                            laboris nisi ut</p>
-                        <a class="default-btn" href="schedule-tour.html">Schedule A Tour</a>
+                        <h2>SAE GIVES YOU WORLD ACCESS</h2>
+                        <p>SAE has around 47 campuses in 23 countries. Our students and teachers are a unique, diverse,
+                            and creative community who come together for a collective purpose – outstanding education
+                            opportunities. Our expertise is world-recognised and truly global.</p>
                     </div>
                 </div>
                 <div class="content-items" data-dot="<button>03</button>">
@@ -324,25 +348,10 @@
                         style=" background-image: url('{{ asset('assets/images/film.png') }}'); ">
                     </div>
                     <div class="content" data-aos="fade-up" data-aos-delay="200">
-                        <span>Campus Information</span>
-                        <h2>Where Knowledge Meets Innovation</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm tem incid idunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim iam quis nostrud xerci tation ulla mco
-                            laboris nisi ut</p>
-                        <a class="default-btn" href="schedule-tour.html">Schedule A Tour</a>
-                    </div>
-                </div>
-                <div class="content-items" data-dot="<button>04</button>">
-                    <div class="image " data-aos="fade-zoom-in" data-aos-delay="100"
-                        style="background-image: url('{{ asset('assets/images/design.png') }}')">
-                    </div>
-                    <div class="content" data-aos="fade-up" data-aos-delay="200">
-                        <span>Campus Information</span>
-                        <h2>Where Knowledge Meets Innovation</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm tem incid idunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim iam quis nostrud xerci tation ulla mco
-                            laboris nisi ut</p>
-                        <a class="default-btn" href="schedule-tour.html">Schedule A Tour</a>
+                        <h2>SAE EXPOSES YOU TO THE REAL WORLD</h2>
+                        <p>At SAE, we know creative media industry graduates need individual practical training. We
+                            recognised this back in 1976 – that’s why we pioneered our hands-on, industry-focused, and
+                            personalised curriculum, delivered to you in state-of-the-art facilities.</p>
                     </div>
                 </div>
             </div>
