@@ -7,7 +7,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <label for="name">First Name</label>
+                                    <label for="name">First Name <span style="color: red;">*</span></label>
                                     <input type="text" name="first_name" class="form-control" id="name"
                                         wire:model="first_name" required data-error="Please enter your name"
                                         placeholder="First Name">
@@ -22,7 +22,7 @@
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <label for="name">Last Name</label>
+                                    <label for="name">Last Name <span style="color: red;">*</span></label>
                                     <input type="text" name="last_name" class="form-control" id="name2"
                                         wire:model="last_name" required data-error="Please enter your name"
                                         placeholder=" last name ">
@@ -36,7 +36,7 @@
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <label for="name">Email</label>
+                                    <label for="name">Email </label>
                                     <input type="email" name="email" class="form-control" id="email"
                                         wire:model="email" required data-error="Please enter your email"
                                         placeholder="exampl@example.com">
@@ -50,7 +50,7 @@
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <label for="name">Phone</label>
+                                    <label for="name">Phone <span style="color: red;">*</span></label>
                                     <input type="text" name="phone_number" class="form-control" id="phone_number"
                                         wire:model="phone_number" required data-error="Please enter your phone number"
                                         placeholder="966xxxxxxx">
