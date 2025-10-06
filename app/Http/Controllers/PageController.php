@@ -47,7 +47,7 @@ class PageController extends Controller
             'category' => $request->category === 'all_of_them'
                 ? 'all of them'
                 : ($category->name_en ?? null),
-            'course' => json_encode($request->course) || null,
+            'course' => json_encode($request->course),
             'message' => $request->message
         ]);
         return redirect()->back()->with('success', 'thanks for your submission');
