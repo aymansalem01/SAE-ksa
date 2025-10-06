@@ -133,7 +133,7 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label for="name">Any comment</label>
-                                    <textarea name="message" id="message" class="form-control" cols="30" rows="6" required
+                                    <textarea name="message" id="message" class="form-control" cols="30" rows="6" 
                                         data-error="Please enter your message" placeholder=""></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>

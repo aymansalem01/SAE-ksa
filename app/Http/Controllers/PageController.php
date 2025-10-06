@@ -44,7 +44,9 @@ class PageController extends Controller
             'email' => $request->email,
             'phone_number' => $request->phone_number,
             'city' => $request->city == 'other' ? $request->other_city : $request->city,
-            'category' => $request->category == 'all_of_them' ? 'all of them' : $category->name_en ?? null,
+            'category' => $request->category === 'all_of_them'
+                ? 'all of them'
+                : ($category->name_en ?? null),
             'course' => json_encode($request->course) || null,
             'message' => $request->message
         ]);
