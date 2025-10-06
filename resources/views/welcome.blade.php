@@ -196,7 +196,7 @@
                 </div>
                 <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
                     <div class="content">
-                        <p style="font-size:22px ">SAE Gives You World Access
+                        <p >SAE Gives You World Access
                             SAE has around 47 campuses in 23 countries. Our students and teachers are a unique, diverse,
                             and creative community who come together for a collective purpose – outstanding education
                             opportunities.</p>

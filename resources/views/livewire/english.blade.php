@@ -61,19 +61,22 @@
                                     @enderror
                                 </div>
                             </div>
-
-                            <div class="form-group col-6 ">
-                                <label for="name">Study plan</label>
-                                <select class="form-select" aria-label="Default select example" name="category"
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group  ">
+                                    <label for="name">Study plan</label>
+                                    <select class="form-select" aria-label="Default select example" name="category"
                                     wire:model.live="category">
                                     <option value="" selected>Select study plan</option>
                                     @foreach ($categories as $category)
-                                        <option value="{{ $category->id }}">{{ $category->name_en }} </option>
+                                    <option value="{{ $category->id }}">{{ $category->name_en }} </option>
                                     @endforeach
                                     <option value="all_of_them">all of them</option>
                                 </select>
                             </div>
-                            <div class="form-group col-6">
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+
+                            <div class="form-group ">
                                 <label for="course">Select Your Course</label>
                                 <div class="dropdown">
                                     <button class="form-select text-start" type="button"
@@ -107,6 +110,7 @@
                                     </ul>
                                 </div>
                             </div>
+                            </div>
 
                             <div class="col-12">
                                 <div class="form-group">
@@ -133,7 +137,7 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label for="name">Any comment</label>
-                                    <textarea name="message" id="message" class="form-control" cols="30" rows="6" 
+                                    <textarea name="message" id="message" class="form-control" cols="30" rows="6"
                                         data-error="Please enter your message" placeholder=""></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
