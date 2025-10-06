@@ -170,7 +170,7 @@ p:last-child {
   background-color: var(--mainColor);
   -webkit-transition: var(--transition);
   transition: var(--transition);
-  padding: 20px 45px;
+  padding: 15px 27px;
   color: var(--whiteColor);
   display: inline-block;
   border-radius: 40px;
@@ -213,7 +213,7 @@ a.white-under-btn {
 
 .section-title h2 {
   margin-bottom: 0;
-  font-size: 48px;
+  font-size: 35px;
   font-family: 'Lexend', sans-serif;
 }
 
@@ -225,7 +225,7 @@ a.white-under-btn {
 }
 
 .section-title .sub-title p{
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .section-title-2 .sub-title p{
@@ -952,7 +952,7 @@ About Us Area 2 CSS
 
 .about-us-area-2 .content-items .content {
   max-width: 615px;
-  padding: 20px 20px;
+  padding: 40px 40px;
   background-color: var(--secounderyColor);
   position: absolute;
   content: '';
@@ -971,11 +971,12 @@ About Us Area 2 CSS
 
 .about-us-area-2 .content-items .content h2{
   font-family: 'Lexend', sans-serif;
-  font-size: 48px;
+  font-size: 35px;
 }
 
 .about-us-area-2 .content-items .content p{
   margin-bottom: 30px;
+  font-size: 15px;
 }
 
 .global-alumni-events{
@@ -1000,7 +1001,7 @@ About Us Area 2 CSS
   margin-bottom: 30px;
 }
 .global-alumni-events .global-content-items .content p{
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .global-alumni-events .image{
   background-image: url(../img/all-img/about-image-4.png);
@@ -2404,7 +2405,7 @@ Find Degree Area CSS
 .find-degree .selector-btns .default-btn {
   border-radius: 5px;
   font-weight: 500;
-  padding: 15px 45px;
+  padding: 15px 20px;
 }
 
 .find-degree .content-1 .btn {

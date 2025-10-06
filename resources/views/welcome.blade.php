@@ -77,9 +77,9 @@
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="index.html">
-                    <img class="logo-light" src="{{ asset('assets/images/sae-logo.webp') }}" alt="logo"
+                    <img class="logo-light" src="{{ asset('assets/images/sae-logo.png') }}" alt="logo"
                         width="200px">
-                    <img class="logo-dark" src="{{ asset('assets/images/sae-logo.webp') }}" alt="logo"
+                    <img class="logo-dark" src="{{ asset('assets/images/sae-logo.png') }}" alt="logo"
                         width="200px">
                 </a>
                 <a class="navbar-toggler" data-bs-toggle="offcanvas" href="#navbarOffcanvas" role="button"
@@ -226,7 +226,7 @@
         <div class="container">
             <div class="section-title" data-aos="fade-up" data-aos-delay="100">
                 <h2>Why SAE</h2>
-                <p style="font-size: 16px;">
+                <p >
                     SAE has been delivering outstanding industry-focused education since 1976. We have set the benchmark
                     for Higher Education in Creative Media because we know these industries and how to train
                     industry-ready graduates.

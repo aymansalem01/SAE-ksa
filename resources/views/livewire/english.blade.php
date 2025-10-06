@@ -97,9 +97,9 @@
                                         @endforeach
                                         @if (count($courses) == 0)
                                             <li>
-                                                <div class="text-end">
-                                                    <label class="form-check-label" for="course1"> please select
-                                                        category first
+                                                <div class="text-start">
+                                                    <label class="form-check-label" for="course1"> Please select
+                                                        study plan
                                                         </label>
                                                 </div>
                                             </li>

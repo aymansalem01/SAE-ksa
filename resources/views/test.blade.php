@@ -225,7 +225,7 @@
         <div class="container">
             <div class="section-title" data-aos="fade-up" data-aos-delay="100">
                 <h2>Why SAE</h2>
-                <p style="font-size: 16px;">
+                <p style="font-size: 14px;">
                     SAE has been delivering outstanding industry-focused education since 1976. We have set the benchmark
                     for Higher Education in Creative Media because we know these industries and how to train
                     industry-ready graduates.
