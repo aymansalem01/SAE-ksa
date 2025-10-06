@@ -535,7 +535,7 @@ Banner Area 2 CSS
 .banner-content-2 .content h1{
   color: var(--whiteColor);
   font-family: 'Lexend', sans-serif;
-  font-size: 90px;
+  font-size: 100px;
 }
 
 .banner-content-2 .content p {
@@ -4963,7 +4963,6 @@ Footer Area CSS
 
 .copy-right-area.style-2 .social-list li a {
   display: block;
-  background-color: var(--whiteColor);
   height: 40px;
   width: 40px;
   text-align: center;

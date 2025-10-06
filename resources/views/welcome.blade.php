@@ -155,7 +155,7 @@
 
 
     <!-- Start Clgun Banner 2 Area -->
-    <div class="banner-area-2 big-bg-2">
+    <div class="banner-area-2 big-bg-2" id="home">
         <!-- Background Video -->
         <video autoplay muted loop playsinline class="bg-video">
             <source src="{{ asset('assets/images/video.mp4') }}" type="video/mp4">
@@ -167,7 +167,7 @@
                 <div class="content">
                     <span data-aos="fade-zoom-in" data-aos-delay="300">Leading Global Specialist in Creative Media
                         Education</span>
-                    <h1 data-aos="fade-up" data-aos-delay="200" style="font-size: 100px">SAE Institue</h1>
+                    <h1 data-aos="fade-up" data-aos-delay="200" >SAE Institute</h1>
                     <p data-aos="fade-up" data-aos-delay="300">
                         YOUR CREATIVE CAREER BEGINS NOW
                     </p>
@@ -286,20 +286,14 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4">
                         <div class="cpr-left">
-                            <p>Copyright© <a href="#">SAE Institue</a>, All rights reserved.</p>
+                            <p>Copyright© <a href="#home">SAE Institue</a>, All rights reserved.</p>
                         </div>
                     </div>
-                    <div class="col-lg-8">
-                        <div class="cpr-right">
+                    <div class="col-lg-8 ">
+                        <div class="cpr-right ">
                             <ul>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Cookie Policy</a></li>
-                            </ul>
-                            <ul class="social-list">
-                                <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
-                                <li><a href="#"><i class='bx bxl-instagram-alt'></i></a></li>
-                                <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-                                <li><a href="#"><i class='bx bxl-linkedin-square'></i></a></li>
+                                <li><a href="https://jordan.sae.edu/policies-and-procedures/" target="_blank">Privacy Policy</a></li>
+                                <li><a href="https://jordan.sae.edu/policies-and-procedures/" target="_blank" >Cookie Policy</a></li>
                             </ul>
                         </div>
                     </div>

@@ -79,7 +79,7 @@
     border-bottom: 10px solid #dd0733;
   }
   .banner-content-2 .content h1 {
-    font-size: 38px;
+    font-size: 50px;
   }
   .banner-content-2 .content span{
     font-size: 16px;
@@ -147,7 +147,7 @@
   a.white-under-btn {
     margin-bottom: 15px;
     display: block;
-  }   
+  }
   .undergraduate-area .item .content h3{
     font-size: 22px;
   }
@@ -325,7 +325,7 @@
     font-size: 25px;
     margin-right: 5px;
   }
-  
+
   .scholarship-area .content h2 {
     margin-bottom: 20px;
     font-size: 30px;
@@ -362,7 +362,7 @@
   .subscribe-area-3 .content h2 {
     font-size: 30px;
     margin-bottom: 40px;
-  } 
+  }
   .subscribe-area-3 .image {
     bottom: -2%;
     left: 15%;
@@ -423,7 +423,7 @@
     margin-bottom: 20px;
     font-size: 30px;
   }
-  
+
 
   .features-content-2 .sub-title p{
     font-size: 16px;
@@ -534,7 +534,7 @@
   .find-degree .content-1 {
     padding: 14px 10px;
   }
-  
+
   .find-degree .content-image .content h5 {
     font-size: 14px;
   }
@@ -547,7 +547,7 @@
   .find-degree .content-image .content .btn {
     font-size: 14px;
   }
-  
+
   .find-degree .content-image .content {
     top: 8%;
   }
@@ -575,7 +575,7 @@
   .global-alumni-events .global-content-items .content h2 {
     font-size: 30px;
     margin-bottom: 20px;
-  } 
+  }
   .global-alumni-events .global-content-items .content p {
     margin-bottom: 20px;
   }
@@ -677,7 +677,7 @@
   .quick-search .quick-content h2 {
     margin-bottom: 30px;
     font-size: 30px;
-  } 
+  }
   .quick-search .quick-content .sub-title i {
     font-size: 25px;
     margin-right: 5px;
@@ -888,7 +888,7 @@
   .about-alumni .image {
     padding: 110px 150px;
   }
-  
+
 
   .slider-event.owl-theme .owl-nav [class*=owl-] {
     left: 0px;
@@ -1153,7 +1153,7 @@
     font-size: 14px;
     margin-bottom: 25px;
   }
-  .applicant-from .form-cookies-consent label { 
+  .applicant-from .form-cookies-consent label {
     font-size: 13px;
   }
   .faq-content-2 .faq-answer p {
@@ -1504,7 +1504,7 @@
   }
   .copy-right-area .cpr-right {
     text-align: center;
-    display: inline-block;
+    /* display: inline-block; */
   }
   .copy-right-area .cpr-right ul li {
     margin-right: 12px;
@@ -2302,7 +2302,7 @@
   }
   .news-content-item {
     display: flex;
-  }  
+  }
   .news-content-item .content-box .image {
     width: 60%;
   }
@@ -2529,7 +2529,7 @@
   .global-alumni-events .global-content-items .content h2 {
     font-size: 30px;
     margin-bottom: 20px;
-  } 
+  }
   .global-alumni-events .global-content-items .content p {
     margin-bottom: 20px;
     font-size: 14px;
@@ -2820,7 +2820,7 @@
     font-size: 20px;
     padding-left: 85px;
   }
-  
+
 
   .footer-top-info .content p {
     font-size: 18px;
@@ -3464,7 +3464,7 @@
     font-size: 18px;
     margin-bottom: 15px;
   }
-    
+
   .success-award-area .content {
     padding-right: 0;
   }
@@ -3636,7 +3636,7 @@
   .academics-section .ac-overview .pera-title h2 {
     font-size: 40px;
     margin-bottom: 30px;
-  } 
+  }
   .academics-section .ac-overview .pera-title span {
     font-size: 100px;
   }
@@ -3829,7 +3829,7 @@
     height: 50px;
     margin-bottom: 25px;
     font-size: 15px;
-  }   
+  }
   .contact-form label {
     margin-bottom: 15px;
     font-size: 15px;
@@ -4360,7 +4360,7 @@
   .find-degree .content-1 .search-key .form-control {
     font-size: 16px;
   }
-    
+
   .success-award-area .content {
     padding-right: 0;
   }
