@@ -87,10 +87,10 @@
                                             <li>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" name="course[]"
-                                                        value="{{ $course->name }}" id="course{{ $loop->index }}"
+                                                        value="{{ $course->name_en }}" id="course{{ $loop->index }}"
                                                         wire:model.live="course">
                                                     <label class="form-check-label" for="course{{ $loop->index }}">
-                                                        {{ $course->name }}
+                                                        {{ $course->name_en }}
                                                     </label>
                                                 </div>
                                             </li>
