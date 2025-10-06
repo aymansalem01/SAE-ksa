@@ -66,6 +66,10 @@ class CourseResource extends Resource
                 TextColumn::make('name')
                     ->sortable()
                     ->searchable(),
+                TextColumn::make('name_en')
+                    ->label('Course Name (English)')
+                    ->sortable()
+                    ->searchable(),
                 TextColumn::make('description')
                     ->sortable()
                     ->searchable(),

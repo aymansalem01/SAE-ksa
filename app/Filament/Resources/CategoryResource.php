@@ -55,6 +55,10 @@ class CategoryResource extends Resource
                 TextColumn::make('name')
                     ->sortable()
                     ->searchable(),
+                TextColumn::make('name_en')
+                    ->label('Category Name (English)')
+                    ->sortable()
+                    ->searchable(),
                 TextColumn::make('header')
                     ->sortable()
                     ->searchable(),
