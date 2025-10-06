@@ -61,6 +61,9 @@ class SubmissionResource extends Resource
                         'Riyadh' => 'Riyadh',
                     ])
                     ->columnSpan(1),
+                TextInput::make('message')
+                    ->nullable()
+                    ->columnSpan(2),
             ]);
     }
 
@@ -129,7 +132,6 @@ class SubmissionResource extends Resource
     {
         return [
             'index' => Pages\ListSubmissions::route('/'),
-            'create' => Pages\CreateSubmission::route('/create'),
             'edit' => Pages\EditSubmission::route('/{record}/edit'),
         ];
     }
