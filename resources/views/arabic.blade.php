@@ -202,7 +202,8 @@
             <div class="about-content-courser owl-carousel owl-theme text-end">
                 <div class="content-items" data-dot="<button>01</button>">
                     <div class="image ct-bg-1" data-aos="fade-zoom-in" data-aos-delay="100"
-                        style="background-image: url('');"></div>
+                        style="background-image: url('{{ asset('assets/images/game.png') }}');">
+                    </div>
                     <div class="content" data-aos="fade-up" data-aos-delay="200" dir="rtl">
                         <h2>SAE تُعِدّك للنجاح</h2>
                         <p style="font-size: 20px">نحن الرائدون عالميًا في التعليم الإبداعي لأننا نعمل عن قرب مع شركاء الصناعة، ونوظف مدرّسين
@@ -212,7 +213,8 @@
 
                 <div class="content-items" data-dot="<button>02</button>">
                     <div class="image ct-bg-2" data-aos="fade-zoom-in" data-aos-delay="100"
-                        style="background-image: url('');"></div>
+                        style="background-image: url('{{ asset('assets/images/audio.png') }}') ">
+                    </div>
                     <div class="content" data-aos="fade-up" data-aos-delay="200" dir="rtl">
                         <h2>SAE تفتح لك أبواب العالم</h2>
                         <p style="font-size: 20px">يضم معهد SAE حوالي 47 حرمًا جامعيًا في 23 دولة. مجتمعنا الإبداعي من الطلاب والمدرسين يجمع بين
@@ -222,7 +224,8 @@
 
                 <div class="content-items" data-dot="<button>03</button>">
                     <div class="image ct-bg-3" data-aos="fade-zoom-in" data-aos-delay="100"
-                        style="background-image: url();"></div>
+                        style=" background-image: url('{{ asset('assets/images/film.png') }}'); ">
+                    </div>
                     <div class="content" data-aos="fade-up" data-aos-delay="200" dir="rtl">
                         <h2>SAE تُقربك من الواقع</h2>
                         <p style="font-size: 20px">ندرك في SAE أن طلاب الصناعات الإبداعية يحتاجون إلى تدريب عملي فردي، لذلك قمنا منذ عام 1976
