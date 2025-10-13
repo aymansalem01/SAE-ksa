@@ -107,7 +107,7 @@
                     <div class="others-option d-flex align-items-center">
                         <div class="option-item">
                             <div class="nav-btn">
-                                <a href="{{route('test')}}" class="default-btn">عربي</a>
+                                <a href="{{route('ar')}}" class="default-btn">عربي</a>
                             </div>
                         </div>
                     </div>

@@ -20,7 +20,10 @@ class PageController extends Controller
     {
         return  view('english');
     }
-
+    public function arabic()
+    {
+        return view('arabic');
+    }
 
     public function submission(Request $request)
     {
