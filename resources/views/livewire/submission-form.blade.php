@@ -1,117 +1,168 @@
-<div>
-    <div class="form-header">
-        <h2 style="color: #f15d24;">سجّل التخصص المهتم به</h2>
-    </div>
-    <form action="{{ route('submission') }}" method="POST">
-        @csrf
-        <!-- Full Name -->
-        <div class="mb-4">
-            <label for="name" class="form-label">الإسم الكامل:</label>
-            <input type="text" name="name" class="form-control p-3" style="background-color: #111827" id="name"
-                wire:model="name" placeholder="ادخل الاسم الكامل" required value="{{ old('name') }}" />
-            @error('name')
-                <span class="text-danger">{{ $message }}</span>
-            @enderror
-        </div>
-        <!-- Email -->
-        <div class="mb-4">
-            <label for="email" class="form-label">البريد الإلكتروني:</label>
-            <input type="email" name="email" class="form-control p-3" style="background-color: #111827"
-                wire:model="email" id="email" placeholder="مثال : xxxx@example.com" value="{{ old('email') }}" />
-            @error('email')
-                <span class="text-danger">{{ $message }}</span>
-            @enderror
-        </div>
-        <!-- Phone -->
-        <div class="mb-4">
-            <label for="phone" class="form-label">رقم الهاتف:</label>
-            <input type="text" name="phone_number" class="form-control p-3" style="background-color: #111827"
-                wire:model="phone_number" id="phone" placeholder=" ادخل رقم الهاتف ابدأ ب 966" required
-                value="{{ old('phone_number') }}" />
-            @error('phone_number')
-                <span class="text-danger">{{ $message }}</span>
-            @enderror
-        </div>
-        <!-- City -->
-        <div class="mb-4">
-            <label for="city" class="form-label">المدينة:</label>
-            <select id="city" name="city" class="form-select p-3" style="background-color: #111827"
-                wire:model.live="city">
-                <option selected disabled>إختر المدينة</option>
-                <option value="Jeddah">جدة</option>
-                <option value="Riyadh">الرياض</option>
-                <option value="other">اخرى</option>
-            </select>
-            @if ($city === 'other')
-                <input type="text" name="other_city" placeholder="المدينة" class="form-control p-3 mt-3"
-                    style="background-color: #111827" wire:model="otherCity">
-            @endif
-        </div>
-        <!-- category -->
-        <div class="mb-4">
-            <label for="category" class="form-label">إختر الخطة:</label>
-            <select id="category" name="category" class="form-select p-3" style="background-color: #111827"
-                wire:model.live="category">
-                <option selected value="">إختر الخطة المهتم بها</option>
-                @foreach ($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->name }} </option>
-                @endforeach
-                <option value="all_of_them">جميع الخطط</option>
-            </select>
-            @error('category')
-                <span class="text-danger">{{ $message }}</span>
-            @enderror
-        </div>
-        <!-- Course -->
-        <div class="mb-4">
-            <label for="course" class="form-label">التخصص المهتم به:</label>
-            <div class="dropdown">
-                <button class="btn btn-dark dropdown-toggle p-3 w-100 text-end" type="button" id="dropdownMenuButton"
-                    data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #111827">
-                    "يمكنك إختيار اكثر من خطة"
-                </button>
-                <ul class="dropdown-menu w-100 p-2 bg-dark text-white" aria-labelledby="dropdownMenuButton">
-                    @if (count($courses) == 0)
-                        <li>
-                            <div class="text-end">
-                                {{-- <input class="form-check-input" type="checkbox" value="" id="course1" wire:model.live="course"
-                                    name="course" /> --}}
-                                <label class="form-check-label" for="course1">الرجاء إختيار الخطة</label>
+<div class="contact-area ptb-100" dir="rtl">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="contact-form col-8">
+                <form id="contactForm" action="{{ route('submission') }}" method="POST">
+                    @csrf
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label for="name">الاسم الأول <span style="color: red;">*</span></label>
+                                <input type="text" name="first_name" class="form-control" id="name"
+                                    wire:model="first_name" required data-error="يرجى إدخال الاسم الأول"
+                                    placeholder="الاسم الأول">
+                                @error('first_name')
+                                    <div class="help-block with-errors">
+                                        <span class="text-danger">{{ $message }}</span>
+                                    </div>
+                                @enderror
                             </div>
-                        </li>
-                    @endif
-                    @foreach ($courses as $course)
-                        <li>
-                            <div class="text-start">
-                                <input class="form-check-input" type="checkbox" value="{{ $course->name }}"
-                                    id="course1" wire:model.live="course" name="course[]" />
-                                <label class="form-check-label" for="course1">{{ $course->name }}</label>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label for="name">اسم العائلة <span style="color: red;">*</span></label>
+                                <input type="text" name="last_name" class="form-control" id="name2"
+                                    wire:model="last_name" required data-error="يرجى إدخال اسم العائلة"
+                                    placeholder="اسم العائلة">
+                                @error('last_name')
+                                    <div class="help-block with-errors">
+                                        <span class="text-danger">{{ $message }}</span>
+                                    </div>
+                                @enderror
                             </div>
-                        </li>
-                    @endforeach
-                </ul>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label for="name">البريد الإلكتروني</label>
+                                <input type="email" name="email" class="form-control" id="email"
+                                    wire:model="email" required data-error="يرجى إدخال البريد الإلكتروني"
+                                    placeholder="example@example.com">
+                                @error('email')
+                                    <div class="help-block with-errors">
+                                        <span class="text-danger">{{ $message }}</span>
+                                    </div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label for="name">رقم الهاتف <span style="color: red;">*</span></label>
+                                <input type="text" name="phone_number" class="form-control" id="phone_number"
+                                    wire:model="phone_number" required data-error="يرجى إدخال رقم الهاتف"
+                                    placeholder="966xxxxxxx">
+                                @error('phone_number')
+                                    <div class="help-block with-errors">
+                                        <span class="text-danger">{{ $message }}</span>
+                                    </div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label for="name">خطة الدراسة</label>
+                                <select class="form-select" aria-label="Default select example" name="category"
+                                    wire:model.live="category">
+                                    <option value="" selected>اختر خطة الدراسة</option>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
+                                    <option value="all_of_them">الكل</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label for="course">اختر دورتك</label>
+                                <div class="dropdown">
+                                    <button class="form-select text-end" type="button" id="dropdownMenuButton"
+                                        data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #fff;">
+                                        <span id="selectedText">اختر الدورات...</span>
+                                    </button>
+                                    <ul class="dropdown-menu w-100 p-2 text-end" aria-labelledby="dropdownMenuButton"
+                                        wire:ignore.self style="max-height: 200px; overflow-y: auto;">
+                                        @foreach ($courses as $course)
+                                            <li>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="course[]"
+                                                        value="{{ $course->name_en }}" id="course{{ $loop->index }}"
+                                                        wire:model.live="course">
+                                                    <label class="form-check-label" for="course{{ $loop->index }}">
+                                                        {{ $course->name }}
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        @endforeach
+                                        @if (count($courses) > 0)
+                                            <li>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="course[]"
+                                                        value="all_of_them" id="course" wire:model.live="course">
+                                                    <label class="form-check-label" for="course">
+                                                        جميعها، أود الاستكشاف والتعلم أكثر.
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        @endif
+                                        @if (count($courses) == 0)
+                                            <li>
+                                                <div class="text-end">
+                                                    <label class="form-check-label" for="course1">
+                                                        يرجى اختيار خطة الدراسة
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        @endif
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="name">اختر مدينتك</label>
+                                <select class="form-select" name="city" aria-label="Default select example"
+                                    wire:model.live="city">
+                                    <option selected>اختر مدينتك</option>
+                                    <option value="Jeddah">جدة</option>
+                                    <option value="Riyadh">الرياض</option>
+                                    <option value="Dammam">الدمام</option>
+                                    <option value="other">أخرى</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        @if ($city === 'other')
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input type="text" name="other_city" placeholder="أدخل مدينتك"
+                                        class="form-control" style="background-color: #111827"
+                                        wire:model="otherCity">
+                                </div>
+                            </div>
+                        @endif
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label for="name">أي ملاحظات</label>
+                                <textarea name="message" id="message" class="form-control" cols="30" rows="6"
+                                    data-error="يرجى إدخال الرسالة" placeholder=""></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12">
+                            <button type="submit" class="default-btn">إرسال الآن</button>
+                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </form>
             </div>
-            @error('course')
-                <span class="text-danger">{{ $message }}</span>
-            @enderror
         </div>
-        <div class="mb-5">
-            <label for="hear" class="form-label">هل سمعت من قبل عن الكلية الاسترالية لصناعة الإعلام الإبداعي؟</label>
-            <select id="hear" name="hear" class="form-select p-3" style="background-color: #111827"
-                wire:model.live="hear">
-                <option selected value=""> هل سمعت من قبل </option>
-                <option value="yes">نعم </option>
-                <option value="no"> لا, مهتم لمعرفة المزيد </option>
-            </select>
-            @error('hear')
-                <span class="text-danger">{{ $message }}</span>
-            @enderror
-        </div>
-        <!-- Submit -->
-        <div class="d-flex justify-content-center" >
-        <button type="submit" class="btn btn-custom" style="background-color: #ff6900; border: solid #a0a0a0 0.1px">
-            إرسال
-        </button>
-        </div>
-    </form>
+    </div>
 </div>

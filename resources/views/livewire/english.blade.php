@@ -65,51 +65,62 @@
                                 <div class="form-group  ">
                                     <label for="name">Study plan</label>
                                     <select class="form-select" aria-label="Default select example" name="category"
-                                    wire:model.live="category">
-                                    <option value="" selected>Select study plan</option>
-                                    @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->name_en }} </option>
-                                    @endforeach
-                                    <option value="all_of_them">all of them</option>
-                                </select>
-                            </div>
+                                        wire:model.live="category">
+                                        <option value="" selected>Select study plan</option>
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->id }}">{{ $category->name_en }} </option>
+                                        @endforeach
+                                        <option value="all_of_them">all of them</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
 
-                            <div class="form-group ">
-                                <label for="course">Select Your Course</label>
-                                <div class="dropdown">
-                                    <button class="form-select text-start" type="button"
-                                        id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"
-                                        style="background-color: #fff;">
-                                        <span id="selectedText">Select courses...</span>
-                                    </button>
-                                    <ul class="dropdown-menu w-100 p-2" aria-labelledby="dropdownMenuButton" wire:ignore.self
-                                        style="max-height: 200px; overflow-y: auto;">
-                                        @foreach ($courses as $course)
-                                            <li>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="course[]"
-                                                        value="{{ $course->name_en }}" id="course{{ $loop->index }}"
-                                                        wire:model.live="course">
-                                                    <label class="form-check-label" for="course{{ $loop->index }}">
-                                                        {{ $course->name_en }}
-                                                    </label>
-                                                </div>
-                                            </li>
-                                        @endforeach
-                                        @if (count($courses) == 0)
-                                            <li>
-                                                <div class="text-start">
-                                                    <label class="form-check-label" for="course1"> Please select
-                                                        study plan
+                                <div class="form-group ">
+                                    <label for="course">Select Your Course</label>
+                                    <div class="dropdown">
+                                        <button class="form-select text-start" type="button" id="dropdownMenuButton"
+                                            data-bs-toggle="dropdown" aria-expanded="false"
+                                            style="background-color: #fff;">
+                                            <span id="selectedText">Select courses...</span>
+                                        </button>
+                                        <ul class="dropdown-menu w-100 p-2" aria-labelledby="dropdownMenuButton"
+                                            wire:ignore.self style="max-height: 200px; overflow-y: auto;">
+                                            @foreach ($courses as $course)
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="course[]"
+                                                            value="{{ $course->name_en }}"
+                                                            id="course{{ $loop->index }}" wire:model.live="course">
+                                                        <label class="form-check-label" for="course{{ $loop->index }}">
+                                                            {{ $course->name_en }}
                                                         </label>
-                                                </div>
-                                            </li>
-                                        @endif
-                                    </ul>
+                                                    </div>
+                                                </li>
+                                            @endforeach
+                                            @if (count($courses) > 0)
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="course[]"
+                                                            value="all_of_them" id="course" wire:model.live="course">
+                                                        <label class="form-check-label" for="course">
+                                                            All of them, I'd love to explore and learn more.
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            @endif
+                                            @if (count($courses) == 0)
+                                                <li>
+                                                    <div class="text-start">
+                                                        <label class="form-check-label" for="course1"> Please select
+                                                            study plan
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            @endif
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
 
                             <div class="col-12">

@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- SweetAlert2 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 
 
 
@@ -89,7 +89,7 @@
                 <div class="collapse navbar-collapse justify-content-between">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a href="" class=" nav-link "  >
+                            <a href="" class=" nav-link ">
                                 Home
                             </a>
                         </li>
@@ -107,7 +107,7 @@
                     <div class="others-option d-flex align-items-center">
                         <div class="option-item">
                             <div class="nav-btn">
-                                <a href="#contactForm" class="default-btn">Contact Us</a>
+                                <a href="{{route('test')}}" class="default-btn">عربي</a>
                             </div>
                         </div>
                     </div>
@@ -165,14 +165,14 @@
         <div class="container">
             <div class="banner-content-2">
                 <div class="content">
-                    <span data-aos="fade-zoom-in" data-aos-delay="300">Leading Global Specialist in Creative Media
-                        Education</span>
-                    <h1 data-aos="fade-up" data-aos-delay="200" >SAE Institute</h1>
+                    <span data-aos="fade-zoom-in" data-aos-delay="300">Global Leader in Creative & Technology - Soon
+                        in KSA</span>
+                    <h1 data-aos="fade-up" data-aos-delay="200">SAE Institute</h1>
                     <p data-aos="fade-up" data-aos-delay="300">
-                        YOUR CREATIVE CAREER BEGINS NOW
+                        Kickstart Your Creative & Tech Career
                     </p>
                     <div class="buttons-action" data-aos="fade-up" data-aos-delay="100">
-                        <a class="default-btn" href="#contactForm">Contact Us</a>
+                        <a class="default-btn" href="#contactForm">Register your interest</a>
                     </div>
 
                     <div class="scroll-down" data-aos="fade-down" data-aos-delay="100">
@@ -196,7 +196,7 @@
                 </div>
                 <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
                     <div class="content">
-                        <p >SAE Gives You World Access
+                        <p>SAE Gives You World Access
                             SAE has around 47 campuses in 23 countries. Our students and teachers are a unique, diverse,
                             and creative community who come together for a collective purpose – outstanding education
                             opportunities.</p>
@@ -213,7 +213,7 @@
 
 
     <section>
-    @livewire('english')
+        @livewire('english')
     </section>
     <!-- End Contact Area-->
 
@@ -226,7 +226,7 @@
         <div class="container">
             <div class="section-title" data-aos="fade-up" data-aos-delay="100">
                 <h2>Why SAE</h2>
-                <p >
+                <p>
                     SAE has been delivering outstanding industry-focused education since 1976. We have set the benchmark
                     for Higher Education in Creative Media because we know these industries and how to train
                     industry-ready graduates.
@@ -292,8 +292,10 @@
                     <div class="col-lg-8 ">
                         <div class="cpr-right ">
                             <ul>
-                                <li><a href="https://jordan.sae.edu/policies-and-procedures/" target="_blank">Privacy Policy</a></li>
-                                <li><a href="https://jordan.sae.edu/policies-and-procedures/" target="_blank" >Cookie Policy</a></li>
+                                <li><a href="https://jordan.sae.edu/policies-and-procedures/" target="_blank">Privacy
+                                        Policy</a></li>
+                                <li><a href="https://jordan.sae.edu/policies-and-procedures/" target="_blank">Cookie
+                                        Policy</a></li>
                             </ul>
                         </div>
                     </div>
@@ -306,18 +308,18 @@
     <div class="go-top active">
         <i class="bx bx-up-arrow-alt"></i>
     </div>
-    @if(session('success'))
-<script>
-    Swal.fire({
-        icon: 'success',
-        title: 'Success!',
-        text: "{{ session('success') }}",
-        timer: 5000,
-        timerProgressBar: true,
-        showConfirmButton: false
-    });
-</script>
-@endif
+    @if (session('success'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: "{{ session('success') }}",
+                timer: 5000,
+                timerProgressBar: true,
+                showConfirmButton: false
+            });
+        </script>
+    @endif
     <!-- Links of JS files -->
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/aos.js') }}"></script>

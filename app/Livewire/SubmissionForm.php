@@ -11,9 +11,9 @@ use App\Models\Category;
 
 class SubmissionForm extends Component
 {
-    public $categories , $courses   = [];
+    public $categories, $courses   = [];
 
-    public $name , $email , $phone_number , $city , $category , $hear;
+    public $name, $email, $phone_number, $city, $category, $hear, $otherCity;
 
     public $course = [];
 
@@ -23,8 +23,8 @@ class SubmissionForm extends Component
     }
     public function mount()
     {
-        $this->categories = Category::all();
 
+        $this->categories = Category::all();
     }
 
 
@@ -32,8 +32,7 @@ class SubmissionForm extends Component
     {
         if ($this->category == 'all_of_them') {
             $this->courses = Course::get();
-        }
-        else {
+        } else {
             $this->courses = Course::where('category_id', $this->category)->get();
         }
     }

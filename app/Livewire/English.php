@@ -9,9 +9,9 @@ use App\Models\Category;
 class English extends Component
 {
 
-        public $categories , $courses   = [];
+    public $categories, $courses   = [];
 
-    public $name , $email , $phone_number , $city , $category , $hear ,$otherCity  ;
+    public $name, $email, $phone_number, $city, $category, $hear, $otherCity;
 
     public $course = [];
 
@@ -19,11 +19,10 @@ class English extends Component
     {
         return view('livewire.english');
     }
-     public function mount()
+    public function mount()
     {
 
         $this->categories = Category::all();
-
     }
 
 
@@ -31,8 +30,7 @@ class English extends Component
     {
         if ($this->category == 'all_of_them') {
             $this->courses = Course::get();
-        }
-        else {
+        } else {
             $this->courses = Course::where('category_id', $this->category)->get();
         }
     }
