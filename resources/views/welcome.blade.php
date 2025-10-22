@@ -172,7 +172,7 @@
                         Kickstart Your Creative & Tech Career
                     </p>
                     <div class="buttons-action" data-aos="fade-up" data-aos-delay="100">
-                        <a class="default-btn" href="#contactForm">Register your interest</a>
+                        <a class="default-btn" href="#contactForm">Register your Interest</a>
                     </div>
 
                     <div class="scroll-down" data-aos="fade-down" data-aos-delay="100">
